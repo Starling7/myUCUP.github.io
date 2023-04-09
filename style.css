@@ -1,0 +1,501 @@
+link {
+  display: none;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* MEDIA QUIRIES */
+
+/* laptop */
+
+@media screen and (max-width: 1366px) {
+  .sidebar {
+    font-size: 75%;
+  }
+}
+/* tablet */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    font-size: 62.5%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .sidebar {
+    font-size: 55%;
+  }
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+}
+
+.sidebar {
+  background: #202020;
+  min-height: 100vh;
+  /* position: sticky; */
+  min-width: 20%;
+  padding: 24px;
+  /* display: flex;
+box-sizing: border-box;
+flex-direction: column ; */
+  transition: all ease-in 0.5s;
+}
+
+.hide {
+  width: 50px;
+  transition: all ease-out 0.5s;
+  background: #202020;
+  min-height: 100vh;
+  padding: 24px;
+}
+.main-content {
+  flex-grow: 1;
+}
+
+.sidebar .description-header,
+.hide .description-header {
+  width: 1px;
+  height: 1px;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+  flex: none;
+}
+
+.hide .description-header {
+  display: none;
+}
+
+.sidebar a,
+.hide a {
+  text-decoration: none;
+}
+
+.sidebar .header .list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 15px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-top: 16px;
+}
+
+.hide .header .list-item {
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+.sidebar .header .list-item .icon,
+.hide .header .list-item .icon {
+  margin-right: px;
+  margin: 0px 0px 0px 0px;
+}
+
+.sidebar .main .list-item .description,
+.hide .main .list-item .description {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  padding-left: 1px;
+  text-align: center;
+  color: #ffffff;
+  transition: all ease-out 0.5s;
+}
+
+.hide .main .list-item .description {
+  display: none;
+}
+.sidebar .main .list-item,
+.hide .main .list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 15px;
+  /* width: 212px; */
+  box-sizing: border-box;
+  border-radius: 18px;
+  transition: all ease-in 0.3s;
+}
+
+.sidebar .main .list-item:hover,
+.hide .main .list-item:hover {
+  background: #245953;
+  transition: all ease-in 0.3s;
+}
+
+#menu-button {
+  width: 32px;
+
+  position: absolute;
+  overflow: hidden;
+}
+
+#menu-label {
+  position: relative;
+  display: block;
+  height: 20px;
+  cursor: pointer;
+}
+
+#menu-checkbox {
+  display: none;
+}
+
+#hamburger,
+#menu-label:after,
+#menu-label:before {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+#menu-label:after,
+#menu-label:before {
+  content: "";
+}
+#menu-label:before {
+  top: 0;
+}
+#menu-label:after {
+  top: 8px;
+}
+#hamburger {
+  top: 16px;
+}
+
+#hamburger:before {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  left: 5px;
+  color: #b8621b;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#menu-checkbox:checked + #menu-label::before {
+  left: 0px;
+}
+
+#menu-checkbox:checked + #menu-label::after {
+  left: 0px;
+}
+
+#menu-checkbox:checked + #menu-label #hamburger::before {
+  animation: moveUpThenDown 1s ease 0.2s forwards, shake 0.8s ease 0.2s forwards,
+    shakedown 0.2s ease 1s forwards;
+}
+
+@keyframes moveUpThenDown {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -27px;
+  }
+  100% {
+    top: -13px;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  50% {
+    transform: rotateZ(0);
+  }
+  75% {
+    transform: rotateZ(10deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes shakedown {
+  0% {
+    transform: rotateZ(0);
+  }
+  80% {
+    transform: rotateZ(3deg);
+  }
+  90% {
+    transform: rotateZ(-3deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+.navbar {
+  /* min-width: 80%; */
+  width: 80%;
+  background-color: #282828;
+}
+
+.navbar-new {
+  width: calc(100% - 98px);
+  background-color: #282828;
+}
+.navbar .header,
+.navbar-new .header {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-end;
+  height: 70px;
+
+  /* width: 1300px;
+position: sticky;
+height: 70px; */
+}
+
+.search-wrapper {
+  position: relative;
+  width: 300px;
+  border-radius: 50px;
+  background-color: #202020;
+  border: 1px solid gray;
+  color: white;
+  padding: 16px;
+}
+
+.search-box {
+  background-color: #202020;
+  height: 100%;
+  border: none;
+  color: white;
+  width: 80%;
+}
+
+.icon-search {
+  position: absolute;
+  right: 24px;
+  width: 20px;
+  height: 20px;
+}
+
+.search-box:focus {
+  outline: none;
+}
+
+.navbar .main-header,
+.navbar-new .main-header {
+  padding: 8px 16px;
+  background-color: #202020;
+  width: fit-content;
+  border-radius: 50px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  justify-content: space-between;
+}
+
+.navbar .main-header .description,
+.navbar-new .main-header .description {
+  font-family: Roboto, Noto, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #808080;
+}
+/* .navbar {
+    background-color: #282828;
+    width: 100%;
+    min-height: 100vh;
+} */
+
+/* .navbar .header .icon {
+  position: fixed;
+  cursor: pointer;
+  left: 95.5%;
+  right: 3.39%;
+  top: 2%;
+  bottom: 83.15%;
+}
+
+.navbar .main-header .description {
+  background-color: #282828;
+  cursor: text;
+  font-family: Roboto, Noto, sans-serif;
+  padding-left: 20.5px;
+  border-radius: 50px;
+  padding-top: 17.5px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  size: 20px;
+  position: fixed;
+  align-items: center;
+  left: 60.29%;
+  right: 5.5%;
+  top: 10px;
+  bottom: 91%;
+  color: #808080;
+}
+.navbar .main-header .icon {
+  size: 20px;
+  cursor: pointer;
+  position: fixed;
+  left: 90.29%;
+  right: 1%;
+  top: 25px;
+  bottom: 81.94%;
+} */
+
+.mainkonten {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  overflow-x: scroll;
+}
+
+.jeniskonten {
+  background-color: #303030;
+  width: min-content;
+  padding: 6px 12px;
+  border-radius: 8px;
+  /* cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 7.5px;
+  border-radius: 15px;
+  position: relative;
+  width: 80px;
+  height: 35px;
+  left: 10px;
+  top: -120px;
+  box-sizing: border-box;
+  margin: 210px 10px; */
+}
+
+.jeniskonten .description {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  /* line-height: 16px; */
+  text-align: center;
+  color: #ffffff;
+  /* flex: none;
+  padding-top: 1px;
+  padding-left: 11px;
+  text-decoration: none; */
+}
+
+.jeniskonten:hover {
+  background-color: #202020;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  gap: 16px;
+}
+
+.content-information {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+.isikonten {
+  width: 100%;
+}
+.isikonten img {
+  width: 100%;
+  border-radius: 16px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.isikonten .description {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navbar .isikontem {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 329.48px;
+  height: 185px;
+  left: 750px;
+  top: 91px;
+}
+.navbar .isikontem .home {
+  position: absolute;
+  width: 50.48px;
+  bottom: -45px;
+  height: 40px;
+  padding-top: 100px;
+  padding-left: 0px;
+}
+
+.navbar .isikontem .description {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  padding-top: 10px;
+  padding-left: 50px;
+  text-decoration: none;
+}
+
+.navbar .isikontem .description2 {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  color: #717171;
+  padding-top: 5px;
+  padding-left: 50px;
+  text-decoration: none;
+}
+
+.isikonten .home1 {
+  width: 40px;
+  height: 40px;
+}
+
+.isikonten .description1 {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  color: #717171;
+}
